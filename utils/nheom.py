@@ -114,8 +114,8 @@ def nheom_matrix(
     is_categorical: Sequence[bool],
 ) -> np.ndarray:
     """Compute the NHEOM dissimilarity matrix between all instances."""
-    value_ranges = compute_ranges(data, is_categorical)  # una sola vez
-    rows = [data.iloc[u] for u in range(len(data))]  # una sola vez
+    value_ranges = compute_ranges(data, is_categorical)
+    rows = [data.iloc[u] for u in range(len(data))]
     n = len(rows)
 
     diss_matrix = np.zeros((n, n))
