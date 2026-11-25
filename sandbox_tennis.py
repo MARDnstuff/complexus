@@ -12,6 +12,14 @@ if __name__ == "__main__":
     y = df["Play"]
     is_categorical = [True, True, True, False]
 
+    # TODO: pasar el arreglo o automático para identificar tipo de atributo
+
+    # TODO: revisar tipos de datos numerico y si no cambiar is_cat a is_num
+
+    # TODO: opción de error para tipo de problema, decir las disponibles y error por medidad
+
+    # TODO: metodo indicar medidas disponibles, el usaurio describe el problema -> un solo dato, 18 despues todo es targets
+
     diss_matrix = nheom_matrix(X, is_categorical)
     print(diss_matrix)
 

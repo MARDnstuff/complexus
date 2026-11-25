@@ -223,3 +223,7 @@ __marimo__/
 # Vscode local specifics
 .vscode/
 pyproject.toml
+
+
+dataset/
+diagrams/

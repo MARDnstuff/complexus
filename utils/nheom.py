@@ -77,7 +77,7 @@ def diss(
     is_categorical: bool,
     value_range: float | None = None,
 ) -> float:
-    """Distance between two values 'a' and 'y' of a given attribute."""
+    """Distance between two values 'a' and 'b' of a given attribute."""
     if pd.isna(a) or pd.isna(b):
         return 1.0
     if is_categorical:
@@ -117,6 +117,8 @@ def nheom_matrix(
     value_ranges = compute_ranges(data, is_categorical)
     rows = [data.iloc[u] for u in range(len(data))]
     n = len(rows)
+
+    # TODO: revisar parallel programming
 
     diss_matrix = np.zeros((n, n))
     for u in range(n):
